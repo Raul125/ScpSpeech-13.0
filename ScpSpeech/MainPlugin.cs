@@ -11,8 +11,8 @@
         public override string Name => "ScpSpeech";
         public override string Prefix => "scp_speech";
         public override string Author => "Raul125";
-        public override Version Version => new(1, 0, 0);
-        public override Version RequiredExiledVersion => new(7, 0, 0);
+        public override Version Version => new(1, 0, 1);
+        public override Version RequiredExiledVersion => new(8, 0, 0);
         public override PluginPriority Priority => PluginPriority.Default;
 
         public static MainPlugin Instance;

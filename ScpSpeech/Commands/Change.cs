@@ -19,10 +19,8 @@
             var ply = Player.Get(sender);
 
             bool isAllowed = false;
-            if (ply.CheckPermission(MainPlugin.Instance.Config.Permission))
-                isAllowed = true;
-
-            if (MainPlugin.Instance.Config.AllowedRoleTypes.Contains(ply.Role.Type))
+            if (ply.CheckPermission(MainPlugin.Instance.Config.Permission)
+                || MainPlugin.Instance.Config.AllowedRoleTypes.Contains(ply.Role.Type))
                 isAllowed = true;
 
             if (!isAllowed)

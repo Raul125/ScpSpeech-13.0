@@ -9,7 +9,7 @@
     using PlayerStatsSystem;
 
     [HarmonyPatch(typeof(FpcNoclipToggleMessage), nameof(FpcNoclipToggleMessage.ProcessMessage))]
-    public class VozNoclipParche
+    public class NoclipVoicePatch
     {
         private static bool Prefix(Mirror.NetworkConnection sender)
         {
@@ -19,14 +19,8 @@
             if (MainPlugin.Instance.Config.UseNoclipButtonFeature && Player.TryGet(referenceHub, out Player ply) 
                 && ply.Role.Team is Team.SCPs)
             {
-                bool isAllowed = false;
-                if (ply.CheckPermission(MainPlugin.Instance.Config.Permission))
-                    isAllowed = true;
-
-                if (MainPlugin.Instance.Config.AllowedRoleTypes.Contains(ply.Role.Type))
-                    isAllowed = true;
-
-                if (isAllowed)
+                if (ply.CheckPermission(MainPlugin.Instance.Config.Permission) 
+                    || MainPlugin.Instance.Config.AllowedRoleTypes.Contains(ply.Role.Type))
                 {
                     if (MainPlugin.ScpsToggled.Contains(referenceHub))
                     {

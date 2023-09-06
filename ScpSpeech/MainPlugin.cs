@@ -11,7 +11,7 @@
         public override string Name => "ScpSpeech";
         public override string Prefix => "scp_speech";
         public override string Author => "Raul125";
-        public override Version Version => new(1, 0, 1);
+        public override Version Version => new(1, 0, 2);
         public override Version RequiredExiledVersion => new(8, 0, 0);
         public override PluginPriority Priority => PluginPriority.Default;
 
@@ -40,11 +40,11 @@
             Exiled.Events.Handlers.Server.WaitingForPlayers -= Handlers.OnWaitingForPlayers;
             Exiled.Events.Handlers.Player.ChangingRole -= Handlers.OnChangingRole;
 
-            Handlers = null;
-            Instance = null;
-
             Harmony.UnpatchAll(Harmony.Id);
             Harmony = null;
+
+            Handlers = null;
+            Instance = null;
 
             base.OnDisabled();
         }

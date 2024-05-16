@@ -7,5 +7,5 @@
 ## Commands
 | Command                         | Description                                                      |
 |---------------------------------|------------------------------------------------------------------|
-| .scpsp change                   | The command switches your current voice chat                  \. |
+| .scpsp change                   | The command switches your current voice chat\.                   |
 | .scpsp current                  | Prints the current voice chat\.                                  |

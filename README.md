@@ -7,5 +7,5 @@
 ## Commands
 | Command                         | Description                                                      |
 |---------------------------------|------------------------------------------------------------------|
-| .scpsp change                   | Changes the speaker from a ghost to a spectator and vice versa\. |
-| .scpsp current                  | See the current voice chat\.                                     |
+| .scpsp change                   | The command switches your current voice chat                  \. |
+| .scpsp current                  | Prints the current voice chat\.                                  |
